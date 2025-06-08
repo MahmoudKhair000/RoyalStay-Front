@@ -1,0 +1,235 @@
+/* Start Intro */
+
+.intro {
+  padding: 50px 0;
+  min-height: fit-content;
+  height: calc(100vh - 80px);
+  max-height: 750px;
+  background-image: linear-gradient(#000c 0%, #0009 60%, #0006 100%),
+    url("../../../public/assets/images/intro-bg.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-msg {
+  justify-self: flex-start;
+}
+
+.intro-msg h1 {
+  font-family: var(--font-royal);
+}
+
+.intro-msg p {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.intro-msg button * {
+  font-family: var(--font-easy) !important;
+  font-size: 25px;
+}
+
+.intro-msg button {
+  margin: 25px 25px 0 0;
+  padding: 10px 30px;
+  border-radius: 5px;
+  width: fit-content;
+  border-radius: 30px;
+  transition: var(--transition-one);
+}
+
+.intro-msg .btn-1 {
+  background-color: #036;
+  border: var(--border-one);
+  color: var(--txt-two);
+}
+
+.intro-msg .btn-1 i::before {
+  transform: rotate(45deg);
+}
+
+.intro-msg .btn-2 {
+  background-color: #0005;
+  border: 1px solid var(--txt-two);
+  color: var(--txt-two);
+}
+
+.intro-msg button:hover {
+  background-color: #036a;
+  border: 1px solid #036a;
+  color: var(--txt-two);
+}
+
+/* Start Actions */
+.actions {
+  color: var(--txt-one);
+  background-color: var(--bg-one);
+  border-bottom: var(--border-one);
+}
+.actions a {
+  text-decoration: none;
+  color: var(--txt-two) !important;
+}
+.action {
+  width: 100%;
+  padding: 20px;
+  border: var(--border-one);
+  border-radius: var(--radius-one);
+  color: var(--txt-two);
+  background-color: var(--bg-two);
+  transition: all 0.25s ease-in-out;
+}
+.action:hover {
+  border: var(--border-one);
+  color: var(--txt-one);
+  background-color: var(--bg-one);
+}
+.action i {
+  font-size: 50px;
+}
+.action h4 {
+  font-size: 30px;
+  font-family: var(--font-easy);
+}
+
+/* Start Hotels */
+.hotel-box {
+  background-color: var(--bg-one);
+  border: var(--border-one);
+  border-radius: var(--radius-one);
+  overflow: hidden;
+}
+
+.hotel-box .hotel-img {
+  height: 240px;
+  overflow: hidden;
+}
+
+.hotel-box .hotel-img img {
+  object-fit: cover;
+  min-height: 240px;
+  width: 100%;
+}
+
+.hotel-box .hotel-info {
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hotel-box .hotel-btn {
+  font-size: 25px;
+  padding: 10px 30px;
+  color: #f5f5f5;
+  border: 0;
+  height: 60px;
+  border-radius: 30px;
+  align-self: flex-end;
+  background-color: #003366;
+}
+
+/* Start testimonials */
+
+.testimonial-news .container {
+  padding: 0 !important;
+}
+
+.testimonials,
+.news {
+  width: 49% !important;
+}
+
+@media (max-width: 992px) {
+  .testimonials,
+  .news {
+    width: 100% !important;
+    height:100%;
+  }
+}
+
+/* .cont-row{height: auto;} */
+
+.testimonials,
+.news {
+  padding: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: -7px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px !important;
+}
+
+.testimonials {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -3%;
+}
+
+.testimonials div {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.testimonials div:first-child {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.testimonials img,
+.testimonials img + p {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.news {
+  background-color: #272727;
+  margin-right:0;
+  margin-left:0;
+}
+
+.news img {
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news div {
+  color: #fff;
+}
+
+.news-tag {
+  position: relative;
+  margin-top: 10px !important;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--txt-two);
+}
+
+.news-content {
+  margin-top: 15px;
+  width: 90%;
+  color: var(--golden);
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.news-btn {
+  margin-top: 10px;
+  background-color: var(--golden);
+  transition: all 0.5s ease-in;
+}
+
+.news-btn:hover {
+  color: var(--golden);
+  border: 1px solid var(--golden);
+}
+
+/* End testimonials */

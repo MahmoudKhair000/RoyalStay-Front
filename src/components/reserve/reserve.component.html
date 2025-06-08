@@ -1,0 +1,71 @@
+<div class="bg-art-one py-5">
+  <form (submit)="bookRooms()" class="box">
+    <div class="elem-group inlined">
+      <label>Your Name</label>
+      <p class="custom-box">{{ resevreData.userName }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label>Your E-mail</label>
+      <p class="custom-box">{{ resevreData.userMail }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label>Your Phone</label>
+      <p class="custom-box">{{ resevreData.userPhone }}</p>
+    </div>
+    <hr />
+    <div class="elem-group inlined">
+      <label>Room Type</label>
+      <p class="custom-box">{{ resevreData.roomType }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label>Room Class</label>
+      <p class="custom-box">{{ resevreData.roomClass }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label>Salary Per Day</label>
+      <p class="custom-box">{{ resevreData.roomPrice }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkin-date">Check-in Date</label>
+      <input
+        type="date"
+        id="checkin-date"
+        [(min)]="today"
+        name="checkin"
+        [(ngModel)]="checkinDate"
+        (ngModelChange)="checkoutDate = null"
+        required
+      />
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkout-date">Check-out Date</label>
+      <input
+        type="date"
+        id="checkout-date"
+        [(min)]="checkinDate"
+        name="checkout"
+        [(ngModel)]="checkoutDate"
+        (ngModelChange)="makeDateArray(checkinDate, checkoutDate)"
+        required
+      />
+    </div>
+    <div class="elem-group inlined">
+      <label>Total Price</label>
+      <p class="custom-box">{{ resevreData.total }}</p>
+    </div>
+    <hr />
+    <div class="elem-group">
+      <label for="message">Anything Else?</label>
+      <textarea
+        id="message"
+        name="visitor_message"
+        [(ngModel)]="resevreData.notes"
+        placeholder="Tell us anything else that might be important."
+        required
+      ></textarea>
+    </div>
+    <button type="submit">Reserve Now</button>
+  </form>
+</div>
+
+<!-- [routerLink]="['../res-query']" -->

@@ -1,0 +1,51 @@
+<div class="bg-art-one py-5">
+  <div class="main container">
+    <h2 class="mb-4">Your Reservations !!</h2>
+    <div class="bookings">
+      @for (res of reservations; track $index) {
+      <div class="book">
+        <div class="row">
+          <div
+            class="d-flex align-items-center justify-content-center res-detail col-12 col-md-6 col-lg-3"
+          >
+            <p>Hotel: {{ res.hotelName }}</p>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center res-detail col-12 col-md-6 col-lg-3"
+          >
+            <div>
+              <p>Starts: {{ res.days[0] }}</p>
+              <hr />
+              <p>Ends: &nbsp; {{ res.days[res.days.length - 1] }}</p>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center res-detail col-12 col-md-4 col-lg-2"
+          >
+            <div>
+              <p>Type: &nbsp; {{ res.roomType }}</p>
+              <hr />
+              <p>Class: {{ res.roomClass }}</p>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center res-detail col-12 col-md-4 col-lg-2"
+          >
+            <div>
+              <p>price: {{ res.roomPrice }}$</p>
+              <hr />
+              <p>For {{ res.days.length }} days</p>
+            </div>
+          </div>
+
+          <div
+            class="d-flex align-items-center justify-content-center res-detail col-12 col-md-4 col-lg-2"
+          >
+            <p>Total: {{ res.total }}$</p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
